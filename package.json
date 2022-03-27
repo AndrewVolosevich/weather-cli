@@ -2,8 +2,11 @@
     "name": "weather-cli",
     "version": "1.0.0",
     "description": "cli, wether",
-    "main": "index.js",
-    "bin": "./index.js",
+    "main": "weather.js",
+    "type": "module",
+    "bin": {
+        "weather": "weather.js"
+    },
     "scripts": {
         "start": "node index.js",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,5 +16,10 @@
         "weather"
     ],
     "author": "volosevich1989@gmail.com",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.26.1",
+        "chalk": "^5.0.1",
+        "dedent-js": "^1.0.1"
+    }
 }
