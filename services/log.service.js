@@ -21,3 +21,15 @@ export const printHelp = () => {
         `
     )
 }
+
+export const printWeather = (res, icon) => {
+    console.log(
+        dedent`${chalk.bgMagentaBright(`Weather`)} in city ${res.name}
+        ${icon}  ${res?.weather[0]?.description}
+        temperature ${res.main?.temp} feels like ${res.main?.feels_like}
+        humidity ${res.main?.humidity}
+        clouds ${res?.clouds?.all}
+        wind speed ${res?.wind?.speed}
+        `
+    )
+}

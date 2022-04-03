@@ -2,6 +2,11 @@ import {homedir} from 'os';
 import {join} from 'path';
 import {promises} from 'fs';
 
+export const VALUE_DICTIONARY = {
+    token: 'token',
+    city: 'city'
+}
+
 const isExists = async (path) => {
     try {
         await promises.stat(path)
